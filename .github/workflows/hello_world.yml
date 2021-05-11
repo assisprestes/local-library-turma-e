@@ -42,4 +42,4 @@ jobs:
     
     steps:
       - name: Step final
-        run: echo Ultimo step
+        run: date
