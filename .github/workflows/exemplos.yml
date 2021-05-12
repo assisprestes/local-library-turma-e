@@ -9,9 +9,7 @@ on:
   
 jobs:
   build:
-    env:
-      NODE_VERSION: 14
-
+    
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +27,8 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 14
     
     steps:
       - run: echo $NODE_VERSION
