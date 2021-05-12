@@ -22,13 +22,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ env.NODE_VERSION }}
-        
-    - name: "Configure AWS Credentials"
-      uses: aws-actions/configure-aws-credentials@v1
+    
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
-        
-    - name: Listar Buckets S3
-      run: echo ${{ secrets.AWS_ACESS_KEY_ID }}
+        name: package
+        path: .
+        if-no-files-found: error
