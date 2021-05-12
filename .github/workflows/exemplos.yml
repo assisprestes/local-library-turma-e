@@ -29,3 +29,6 @@ jobs:
         aws-access-key-id: AKIASKRKBSHRTWFUMRK6
         aws-secret-access-key: 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
         aws-region: us-east-1
+        
+    - name: Listar Buckets S3
+      run: aws s3api list-buckets
