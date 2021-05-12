@@ -1,0 +1,31 @@
+name: Upload artifact
+
+on: push
+
+env:
+  ARTIFACT_NAME: pacote
+  
+jobs:
+  save-artifact:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{env.ARTIFACT_NAME}}
+          path: .
+  
+  uses-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gets artifact
+        uses: actions/download-artifact@v2.0.9
+        with:
+          name: ${{env.ARTIFACT_NAME}}
+          path: .
+  
+    
