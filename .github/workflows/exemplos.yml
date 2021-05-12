@@ -6,12 +6,11 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
-
-env:
-  NODE_VERSION: 14
   
 jobs:
   build:
+    env:
+      NODE_VERSION: 14
 
     runs-on: ubuntu-latest
 
@@ -27,3 +26,9 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo $NODE_VERSION
