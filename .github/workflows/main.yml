@@ -28,5 +28,6 @@ jobs:
         with:
           name: ${{env.ARTIFACT_NAME}}
           path: .
-  
+      
+      - run: ls -a
     
