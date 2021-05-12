@@ -26,8 +26,8 @@ jobs:
     - name: "Configure AWS Credentials"
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: AKIASKRKBSHRTWFUMRK6
-        aws-secret-access-key: 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
+        aws-access-key-id: ${{ secrets.AWS_ACESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
         
     - name: Listar Buckets S3
