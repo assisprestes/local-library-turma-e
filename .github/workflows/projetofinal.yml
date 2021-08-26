@@ -103,5 +103,5 @@ jobs:
       with:
         app-name: 'assisprestes-aula08'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5f742cb97f27435f972d2cbf07b09c11 }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: .
