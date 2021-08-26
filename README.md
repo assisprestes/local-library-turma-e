@@ -1,4 +1,5 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=assisprestes_local-library-turma-e&metric=alert_status)](https://sonarcloud.io/dashboard?id=assisprestes_local-library-turma-e)
+
 # local-library
 
 ## Creating the local project
